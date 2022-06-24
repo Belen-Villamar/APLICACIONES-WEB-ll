@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+    api:
+        container_name: complementario
+        restart: always
+        build: .
+        ports:
+          - "5000:5000"
+        depends_on: 
+            - mongo 
+        environment:
+        - PORT="5000"
+        - MONGODB_CNN=mongodb://mongo:27017/complementario
+        
+    mongo:
+        container_name: mongodb
+        image: mongo 
+        ports: 
+          - "27017:27017"
+        logging:
+            driver: none

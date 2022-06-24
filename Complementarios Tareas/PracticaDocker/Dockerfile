@@ -1,11 +1,11 @@
-FROM node:14
 
-RUN mkdir  -p /usr/src/app
+FROM node:17
 
-WORKDIR /usr/src/app
+RUN mkdir  -p /usr/src/www
 
-COPY package.json ./
-COPY package-lock.json ./
+WORKDIR /usr/src/www
+
+COPY package*.json ./
 
 RUN npm install 
 
@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "start"]
