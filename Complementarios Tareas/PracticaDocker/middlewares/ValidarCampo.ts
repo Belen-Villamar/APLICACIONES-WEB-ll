@@ -29,7 +29,7 @@ const validarprecio = [
 
     check('precio')
         .not()
-        .notEmpty().withMessage('La precio no puede estar vacía'),
+        .notEmpty().withMessage('El precio no puede estar vacía'),
         
         
     (req:Request ,res:Response,next:NextFunction) => {
