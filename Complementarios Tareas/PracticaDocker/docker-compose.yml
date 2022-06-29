@@ -1,21 +1,31 @@
 version: "3"
-
+#Se declara la funcion servicio para ingresar todos los que vamos a usar en el proyecto
 services:
+# nombre del servicio que tendra la ruta
     api:
+    #identificador del contenedor 
         container_name: complementario
         restart: always
+         #Se compliara el proyecto dentro de las mismas rutas
         build: .
+        # Se declaea el puerto al cual será expuesto en produccion de manera local
         ports:
           - "5000:5000"
+           #Dependencia de los demas servicios del  proyecto 
         depends_on: 
             - mongo 
+             #Variable declarada desde el contenedor para ejecución interna
         environment:
         - PORT="5000"
         - MONGODB_CNN=mongodb://mongo:27017/complementario
+         # llamanos al servicio mongo
         
     mongo:
+    # Se define el nombre del contenedor para mongo
         container_name: mongodb
+        # La imagen con la que va a trabajar el servicio 
         image: mongo 
+         # Puertos donde va a funcionar
         ports: 
           - "27017:27017"
         logging:
