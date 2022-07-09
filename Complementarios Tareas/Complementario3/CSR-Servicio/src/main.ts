@@ -24,6 +24,7 @@ app.innerHTML += `
   <button id="editar">Editar Servicios Adicionales</button>
   <button id="consultar">Consultar Servicios Adicionales</button>
   <button id="eliminar">Eliminar Servicios Adicionales</button>
+  <button id="limpiar">Limpiar Campos</button>
 `
 //Configuration buttons
 const grabar = document.querySelector<HTMLButtonElement>('#registrar');
