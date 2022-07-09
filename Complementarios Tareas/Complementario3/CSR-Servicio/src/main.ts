@@ -18,7 +18,6 @@ app.appendChild(input);
 
 app.innerHTML += `
 <br><br><label for="nombre">Nombre</label><input id="nombres" style='margin-left:8%'></input><br><br>
-  <label for="idPropietario">idPropietario</label><input id="idPropietario"style='margin-left:6%'></input><br><br>
   <label for="precio">Direccion</label><input id="precio"style='margin-left:8%'></input><br><br><br>
 
   <button id="registrar">Registrar Residencia</button>
