@@ -20,11 +20,10 @@ app.innerHTML += `
 <br><br><label for="nombre">Nombre</label><input id="nombres" style='margin-left:8%'></input><br><br>
   <label for="precio">Direccion</label><input id="precio"style='margin-left:8%'></input><br><br><br>
 
-  <button id="registrar">Servicios Adicionales</button>
-  <button id="editar">Editar Residencia</button>
-  <button id="consultar">Consultar Residencia</button>
-  <button id="eliminar">Eliminar Residencia</button>
-  <button id="limpiar">Limpiar Campos</button>
+  <button id="registrar">Registrar Servicios Adicionales</button>
+  <button id="editar">Editar Servicios Adicionales</button>
+  <button id="consultar">Consultar Servicios Adicionales</button>
+  <button id="eliminar">Eliminar Servicios Adicionales</button>
 `
 //Configuration buttons
 const grabar = document.querySelector<HTMLButtonElement>('#registrar');
