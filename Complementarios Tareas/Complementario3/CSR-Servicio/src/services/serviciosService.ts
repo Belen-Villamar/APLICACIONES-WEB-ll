@@ -1,17 +1,17 @@
 import axios from 'axios';
-import {IResServicio} from '../interfaces/IServicio'
+import {Servicio} from '../interfaces/IServicio'
 
 export const _http = axios.create({
-    baseURL: 'http://localhost:3100/v1/prueba/proyecto/servicios'
+    baseURL: 'http://localhost:2500/v1/servicio/api'
 })
 
-export const postServicio = async (url:string, data: IResServicio[]) => {
+export const postServicio = async (url:string, data: Servicio) => {
     return await _http.post(url, data)
 }
 export const getServicio = async (url:string) => {
     return await _http.get(url)
 }
-export const putServicio = async (url:string, data: IResServicio[]) => {
+export const putServicio = async (url:string, data: Servicio) => {
     return await _http.put(url, data)
 }
 export const deleteServicio = async (url:string) => {

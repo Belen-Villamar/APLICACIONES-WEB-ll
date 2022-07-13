@@ -3,7 +3,7 @@ export interface IResServicio {
     servicios: Servicio[];
 }
 export interface Servicio {
-    _id?:string,
+    id?:string,
     nombre:string,
     precio:number,
 }
